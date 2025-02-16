@@ -26,6 +26,11 @@ Este projeto não requer bibliotecas externas, apenas Python 3.
 ```bash
 python main.py
 ```
+3. Este projeto inclui testes automatizados com **unittest**. Para executá-los, utilize:
+
+```bash
+python -m unittest main.py
+```
 
 ## Explicação do código
 
@@ -52,9 +57,13 @@ python main.py
      - `z2 = karatsuba(high_x, high_y)`
    - Combina os resultados e retorna o produto final.
 
-## Complexidade Assintótica
+## Analise da Complexidade Assintótica
 
 A complexidade temporal do algoritmo de Karatsuba é **O(n^1.585)**, que melhora a abordagem ingênua de multiplicação **O(n²)**. Para grandes valores de `n`, isso reduz significativamente o tempo de execução.
+
+Melhor caso: **O(1)** → Quando os números são menores que 10 (caso base).
+
+Caso médio e pior caso: **O(n^(log2(3))) ≈ O(n^1.585)** → A recursão reduz o tamanho do problema a cada chamada.
 
 ## Complexidade Ciclomática
 
@@ -69,14 +78,20 @@ Onde:
 - **N** é o número de nós.
 - **P** é o número de componentes conexos (1 para um único programa).
 
-Ao analisar o fluxo de execução do algoritmo, determinamos que a complexidade ciclomática do código é relativamente baixa, já que ele contém apenas verificações condicionais e chamadas recursivas bem definidas.
+A partir do diagrama, temos:
 
+Nós (N): 9
+
+Arestas (E): 10
+
+Componentes conexos (P): 1
+
+Aplicando a fórmula: 
+
+A complexidade ciclomática M = 3, indicando um fluxo de controle relativamente simples, mas com recursões que impactam a execução.
 ## Representação do Fluxo de Controle
 
 O fluxo de controle do algoritmo segue a lógica do diagrama abaixo:
 
 ![Diagrama de Fluxo](caminho_para_o_diagrama.png)
 
-## Licença
-
-Este projeto está licenciado sob a Licença MIT.
