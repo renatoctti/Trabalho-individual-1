@@ -21,7 +21,13 @@ Este projeto não requer bibliotecas externas, apenas Python 3.
 ## Como executar o projeto
 
 1. Certifique-se de ter o **Python 3** instalado.
-2. Execute o script com o seguinte comando:
+
+2. Clone este repositório:
+ ```bash
+ git clone https://github.com/renatoctti/Trabalho-individual-1.git
+ ```
+   
+3. O código permite que você insira os 2 números inteiros que você deseja multiplicar. Para rodar o codigo execute o script com o seguinte comando:
 
 ```bash
 python main.py
