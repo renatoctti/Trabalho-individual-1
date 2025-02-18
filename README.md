@@ -12,7 +12,7 @@ O algoritmo de Karatsuba é baseado no princípio de dividir para conquistar, qu
    - Realiza três chamadas recursivas para multiplicação das partes.
    - Combina os resultados para formar o produto final.
 
-A complexidade do algoritmo de Karatsuba é **O(n^(log2(3))) ≈ O(n^1.585)**, que é mais eficiente do que a multiplicação tradicional **O(n²)**.
+A complexidade do algoritmo de Karatsuba é **O(n^(log₂(3))) ≈ O(n^1.585)**, que é mais eficiente do que a multiplicação tradicional **O(n²)**.
 
 ## Dependências
 
@@ -93,5 +93,8 @@ A complexidade ciclomática M = 3, indicando um fluxo de controle relativamente 
 
 O fluxo de controle do algoritmo segue a lógica do diagrama abaixo:
 
-![Diagrama de Fluxo](caminho_para_o_diagrama.png)
+![image](https://github.com/user-attachments/assets/ae2b92f3-f6a8-4885-95ca-9fe54bfd6393)
+
+![image](https://github.com/user-attachments/assets/fc3d5634-58c2-457c-8002-fabf436faf61)
+
 
