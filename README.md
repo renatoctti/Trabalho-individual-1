@@ -10,6 +10,21 @@ O algoritmo de Karatsuba é baseado no princípio de dividir para conquistar, qu
 2. Caso contrário:
    - Divide os números em partes menores.
    - Realiza três chamadas recursivas para multiplicação das partes.
+     1. **Multiplicação das partes inferiores:**
+        ```python
+        z0 = karatsuba(low_x, low_y)
+        ```
+        Multiplica a parte inferior de `x` pela parte inferior de `y`.
+     2. **Multiplicação da soma das partes:**
+        ```python
+        z1 = karatsuba((low_x + high_x), (low_y + high_y))
+        ```
+        Multiplica a soma das partes superior e inferior de `x` pela soma das partes superior e inferior de `y`.
+     3. **Multiplicação das partes superiores:**
+        ```python
+        z2 = karatsuba(high_x, high_y)
+        ```
+        Multiplica a parte superior de `x` pela parte superior de `y`.
    - Combina os resultados para formar o produto final.
 
 A complexidade do algoritmo de Karatsuba é **O(n^(log₂(3))) ≈ O(n^1.585)**, que é mais eficiente do que a multiplicação tradicional **O(n²)**.
