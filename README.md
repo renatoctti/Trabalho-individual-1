@@ -33,6 +33,10 @@ A complexidade do algoritmo de Karatsuba é **O(n^(log₂(3))) ≈ O(n^1.585)**,
 
 Este projeto não requer bibliotecas externas, apenas Python 3.
 
+## Versão Pyhton
+
+Versão 3.13.2
+
 ## Como executar o projeto
 
 1. Certifique-se de ter o **Python 3** instalado.
