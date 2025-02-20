@@ -1,3 +1,5 @@
+import unittest
+
 def karatsuba(x, y):
     # Caso base: se um dos números for menor que 10, usa multiplicação normal
     if x < 10 or y < 10:
@@ -19,18 +21,26 @@ def karatsuba(x, y):
     # Combina os resultados
     return (z2 * 10**(2*m)) + ((z1 - z2 - z0) * 10**m) + z0
 
-if __name__ == "__main__":
-    test_cases = [
-        (3, 4, "Caso com números pequenos"),
-        (7, 8, "Caso com números pequenos"),
-        (1234, 5678, "Caso com números grandes"),
-        (98765, 43210, "Caso com números muito grandes"),
-        (0, 1234, "Caso onde um dos números é zero"),
-        (999, 0, "Caso onde um dos números é zero"),
-        (-3, 4, "Caso onde um número é negativo"),
-        (-5, -6, "Caso onde ambos os números são negativos")
-    ]
+class TestKaratsuba(unittest.TestCase):
+    def test_small_numbers(self):
+        """Caso com números pequenos: 3 * 4 = 12 e 7 * 8 = 56"""
+        self.assertEqual(karatsuba(3, 4), 12)
+        self.assertEqual(karatsuba(7, 8), 56)
+    
+    def test_large_numbers(self):
+        """Caso com números grandes: 1234 * 5678 = 7006652 e 98765 * 43210 = 4267635650"""
+        self.assertEqual(karatsuba(1234, 5678), 7006652)
+        self.assertEqual(karatsuba(98765, 43210), 4267635650)
+    
+    def test_zero_cases(self):
+        """Casos onde um dos números é zero: 0 * 1234 = 0 e 999 * 0 = 0"""
+        self.assertEqual(karatsuba(0, 1234), 0)
+        self.assertEqual(karatsuba(999, 0), 0)
+    
+    def test_negative_cases(self):
+        """Casos com números negativos: -3 * 4 = -12 e -5 * -6 = 30"""
+        self.assertEqual(karatsuba(-3, 4), -12)
+        self.assertEqual(karatsuba(-5, -6), 30)
 
-    for x, y, description in test_cases:
-        result = karatsuba(x, y)
-        print(f"{description}: karatsuba({x}, {y}) = {result}")
+if __name__ == "__main__":
+    unittest.main()
