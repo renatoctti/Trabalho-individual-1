@@ -46,17 +46,11 @@ Versão 3.13.2
  git clone https://github.com/renatoctti/Trabalho-individual-1.git
  ```
    
-3. O código permite que você insira os 2 números inteiros que você deseja multiplicar. Para rodar o codigo execute o script com o seguinte comando:
+3. O código testa automaticamente diversas combinações de numeros e retorna os resultados. Para rodar o codigo execute o script com o seguinte comando:
 
 ```bash
 python main.py
 ```
-3. Este projeto inclui testes automatizados com **unittest**. Para executá-los, utilize:
-
-```bash
-python -m unittest main.py
-```
-
 ## Explicação do código
 
 ### Arquivo: main.py
@@ -120,6 +114,6 @@ O fluxo de controle do algoritmo segue a lógica do diagrama abaixo:
 
 ![image](https://github.com/user-attachments/assets/ae2b92f3-f6a8-4885-95ca-9fe54bfd6393)
 
-![image](https://github.com/user-attachments/assets/fc3d5634-58c2-457c-8002-fabf436faf61)
+
 
 
