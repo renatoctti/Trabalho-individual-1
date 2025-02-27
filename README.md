@@ -99,21 +99,26 @@ Onde:
 
 A partir do diagrama, temos:
 
-Nós (N): 9
+Nós (N): 14
 
-Arestas (E): 10
+Arestas (E): 16
 
 Componentes conexos (P): 1
 
 Aplicando a fórmula: 
+
+M = 16 - 14 + 2  que resulta 1
 
 A complexidade ciclomática M = 3, indicando um fluxo de controle relativamente simples, mas com recursões que impactam a execução.
 ## Representação do Fluxo de Controle
 
 O fluxo de controle do algoritmo segue a lógica do diagrama abaixo:
 
-![image](https://github.com/user-attachments/assets/ae2b92f3-f6a8-4885-95ca-9fe54bfd6393)
 
+
+
+
+![Diagrama_Karatsuba](https://github.com/user-attachments/assets/38599966-22d6-4a2b-9879-5cf63639cdce)
 
 
 
