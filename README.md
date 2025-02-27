@@ -51,6 +51,8 @@ Versão 3.13.2
 ```bash
 python main.py
 ```
+4. Ao rodar o codigo ele oferece três opções, a primeira e rodar os testes, a segunda é inserir manualmente os números que você quer multiplicar, e a terceira permite que você faça as 2 opções anteriores
+
 ## Explicação do código
 
 ### Arquivo: main.py
@@ -78,13 +80,33 @@ python main.py
 
 ## Analise da Complexidade Assintótica
 
+**Complexidade temporal**
+
+A análise de complexidade temporal estuda o tempo que um algoritmo leva para ser executado em função do tamanho da entrada (n).
+
+Ela avalia quantas operações o algoritmo realiza, e não o tempo exato, já que o tempo pode variar conforme o hardware ou linguagem de programação.
+
 A complexidade temporal do algoritmo de Karatsuba é **O(n^1.585)**, que melhora a abordagem ingênua de multiplicação **O(n²)**. Para grandes valores de `n`, isso reduz significativamente o tempo de execução.
 
 Melhor caso: **O(1)** → Quando os números são menores que 10 (caso base).
 
 Caso médio e pior caso: **O(n^(log2(3))) ≈ O(n^1.585)** → A recursão reduz o tamanho do problema a cada chamada.
 
+A análise temporal mostra que o algoritmo de Karatsuba é mais eficiente que a multiplicação tradicional, especialmente para números grandes, pois reduz o número de multiplicações, mesmo que exija mais somas e subtrações.
+
+**Complexidade Espacial**
+
+
+
+A complexidade espacial do algoritmo de Karatsuba depende da profundidade da recursão, em cada chamada, o algoritmo faz 3 chamadas recursivas.
+
+A profundidade da recursão é O(log n) (pois a cada passo os números são reduzidos pela metade).
+
+Levando isto em consideração, a complexidade espacial do algoritmo de Karatsuba não foge de O(log n).
+
 ## Complexidade Ciclomática
+
+A complexidade ciclomática é uma métrica usada na engenharia de software para medir a complexidade lógica de um programa, indicando o número de caminhos independentes que existem no código.
 
 A **complexidade ciclomática** é calculada com a fórmula:
 
@@ -107,9 +129,9 @@ Componentes conexos (P): 1
 
 Aplicando a fórmula: 
 
-M = 16 - 14 + 2  que resulta 1
+M = 16 - 14 + 2  que resulta 4
 
-A complexidade ciclomática M = 3, indicando um fluxo de controle relativamente simples, mas com recursões que impactam a execução.
+A complexidade ciclomática M = 4, indicando um fluxo de controle relativamente simples, mas com recursões que impactam a execução.
 ## Representação do Fluxo de Controle
 
 O fluxo de controle do algoritmo segue a lógica do diagrama abaixo:
