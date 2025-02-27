@@ -43,4 +43,24 @@ class TestKaratsuba(unittest.TestCase):
         self.assertEqual(karatsuba(-5, -6), 30)
 
 if __name__ == "__main__":
-    unittest.main()
+    print("Escolha uma opção:")
+    print("1 - Rodar apenas os testes")
+    print("2 - Inserir números manualmente e mostrar o resultado")
+    print("3 - Fazer ambos")
+    opcao = input("Digite a opção desejada: ")
+
+    if opcao == "1":
+        unittest.main(argv=[''], exit=False)
+    elif opcao == "2":
+        x = int(input("Digite o primeiro número: "))
+        y = int(input("Digite o segundo número: "))
+        resultado = karatsuba(x, y)
+        print(f"Resultado: {x} * {y} = {resultado}")
+    elif opcao == "3":
+        unittest.main(argv=[''], exit=False)
+        x = int(input("Digite o primeiro número: "))
+        y = int(input("Digite o segundo número: "))
+        resultado = karatsuba(x, y)
+        print(f"Resultado: {x} * {y} = {resultado}")
+    else:
+        print("Opção inválida.")
