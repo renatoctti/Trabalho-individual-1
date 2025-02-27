@@ -116,8 +116,9 @@ O fluxo de controle do algoritmo segue a lógica do diagrama abaixo:
 
 
 
-![Diagrama-karatsuba](https://github.com/user-attachments/assets/aded15a8-4ddb-49ac-9e2c-dee47b50e93b)
 
+
+![Diagrama_Karatsuba](https://github.com/user-attachments/assets/38599966-22d6-4a2b-9879-5cf63639cdce)
 
 
 
