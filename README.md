@@ -121,6 +121,43 @@ Onde:
 
 A partir do diagrama, temos:
 
+  **Nós (N) :**
+1. Início da função;
+2. if x < 10 or y < 10;
+3. Return x * y;
+4. Cálculo de n;
+5. Cálculo de m;
+6. Divisão dos números X (divmod);
+7. Divisão dos números Y (divmod);
+8. Chamada recursiva (z0);
+9. Atribuição do resultado a z0;
+10. Chamada recursiva (z1);
+11. Atribuição do resultado a z1;
+12. Chamada recursiva (z2);
+13. Atribuição do resultado a z2;
+14. Retorno do resultado final;
+
+**Arestas (E) :**
+
+1. Início da função → if x < 10 or y < 10
+2. if x < 10 or y < 10 → retorna x * y
+3. if x < 10 or y < 10 → Cálculo de n
+4. Cálculo de n → Cálculo de m
+5. Cálculo de m → Divisão dos números X
+6. Divisão dos números X → Divisão dos números Y
+7. Divisão dos números Y → Chamada recursiva (z0)
+8. Chamada recursiva (z0) → Atribuição do resultado a z0
+9. Chamada recursiva (z0) → Início da funçãO
+10. Atribuição do resultado a z0 → Chamada recursiva (z1)
+11. Chamada recursiva (z1) → Atribuição do resultado a z1
+12. Chamada recursiva (z1) → Início da funçãO
+13. Atribuição do resultado a z1 → Chamada recursiva (z2)
+14. Chamada recursiva (z2) → Atribuição do resultado a z2
+15. Chamada recursiva (z2) → Início da funçãO
+16. Atribuição do resultado a z2 → Retorno do resultado final
+
+
+
 Nós (N): 14
 
 Arestas (E): 16
